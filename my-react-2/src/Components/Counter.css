@@ -1,0 +1,10 @@
+.counter-container{
+    background-color:beige;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    padding:1.5 rem;
+    border:2px solid black;
+
+}
