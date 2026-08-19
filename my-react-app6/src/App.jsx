@@ -3,6 +3,8 @@ import { useEffect,useState } from 'react'
 import './App.css'
 import Loggercomponents from './components/Loggercomponents'
 import Timercomponent from './components/Timercomponent'
+import Datafetcher from './components/Datafetcher'
+import Resign from './components/Resign'
 
 function App() {
   // const[count,setcount]=useState(0);
@@ -77,7 +79,9 @@ function App() {
       <br />
       total is:{total} */}
       <Loggercomponents/>
-      <Timercomponent/> 
+      <Timercomponent/>
+      <Datafetcher/>
+      <Resign/>
     </div>
     
    
