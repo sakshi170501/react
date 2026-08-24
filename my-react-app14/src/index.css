@@ -1,0 +1,204 @@
+@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #1e293b;
+}
+
+/* Main container */
+.view-paste {
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+.view-paste-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Heading */
+.view-paste-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #4f46e5;
+}
+
+/* Card */
+.view-paste-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.view-paste-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(79, 70, 229, 0.2);
+}
+
+/* Title input */
+.view-paste-input {
+  width: 100%;
+  padding: 16px 18px;
+  font-size: 24px;
+  font-weight: 600;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #1e293b;
+  outline: none;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.view-paste-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* Content */
+.view-paste-content {
+  width: 100%;
+  min-height: 450px;
+  padding: 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #334155;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  line-height: 1.7;
+  resize: vertical;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.view-paste-content:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* Date */
+.view-paste-date {
+  margin-top: 18px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Buttons container */
+.view-paste-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.view-paste-button {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.view-paste-button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+.view-paste-button:active {
+  transform: scale(0.96);
+}
+
+/* Back button */
+.back-button {
+  background: #64748b;
+}
+
+.back-button:hover {
+  background: #475569;
+}
+
+/* Copy button */
+.copy-button {
+  background: #059669;
+}
+
+.copy-button:hover {
+  background: #047857;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #0f172a, #111827);
+    color: white;
+  }
+
+  .view-paste-title {
+    color: #818cf8;
+  }
+
+  .view-paste-card {
+    background: #1e293b;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .view-paste-input,
+  .view-paste-content {
+    background: #0f172a;
+    color: #e2e8f0;
+    border-color: #334155;
+  }
+
+  .view-paste-input:focus,
+  .view-paste-content:focus {
+    border-color: #818cf8;
+  }
+
+  .view-paste-date {
+    color: #94a3b8;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .view-paste {
+    padding: 25px 15px;
+  }
+
+  .view-paste-title {
+    font-size: 28px;
+  }
+
+  .view-paste-card {
+    padding: 18px;
+  }
+
+  .view-paste-input {
+    font-size: 19px;
+  }
+
+  .view-paste-content {
+    min-height: 350px;
+  }
+
+  .view-paste-button {
+    width: 100%;
+  }
+}
